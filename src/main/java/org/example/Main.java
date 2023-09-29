@@ -42,12 +42,15 @@ package org.example;
 
  */
 
+import java.util.HashMap;
+
 public class Main {
     public static void main(String[] args) {
         ParserString a = new ParserString();
         IndentifierData b = new IndentifierData();
-        b.identif(a.parse("ВВедите данные"));
-
+        WriterOfFile c = new WriterOfFile();
+//        b.identif(a.parse("ВВедите данные"));
+        c.writerOf((HashMap<String, String>) b.identif(a.parse("ВВедите данные")));
     }
 
 }
